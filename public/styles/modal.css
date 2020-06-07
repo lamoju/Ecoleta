@@ -1,0 +1,95 @@
+#modal {
+    background-color: #0e0a14ef;
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed; /*ficar colada, cmo uma folha de papel emcima da outra*/
+    top: 0; /*ficar acima*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 400ms;
+}
+
+#modal.hide { /*a pagina estara escondida ate o js ser acionado*/
+    display: none;
+}
+
+#modal .content {
+    color: white;
+    width: 420px; /*largura*/
+}
+
+#modal .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+}
+
+#modal .header a {
+    background-image: url("../assets/x.svg");
+    width: 20px;
+    height: 20px;
+    display: flex;
+
+    font-size: 0.01px; /*sumir texto "fechar", na vdd deixar bem pequeno para leitores de tela conseguirem pegar o texto*/
+}
+
+#modal .header h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+#modal form label {
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block; /*vai pegar o bloco inteiro para funcionar o margin*/
+    margin-bottom: 10px;
+}
+
+#modal form .field {
+    display: flex;
+}
+
+#modal form input {
+    flex: 1; /*vai pegar o tamanho q sobrar d tamanho*/
+
+    background-color: #f0f0f5;
+    border-radius: 8px 0 0 8px; /*encaixe perfeito de bordas cm button*/
+    border: 0;
+
+    padding: 16px 24px;
+
+    font-size: 16px;
+    color: #6c6c80;
+}
+
+#modal form button {
+    width: 72px;
+    height: 72px;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 0 8px 8px 0; /*encaixe perfeito de bordas cm input*/
+}
+
+#modal form button:hover {
+    background-color: #2fb85e;
+}
+
+/*Isto é para o modal point-created*/
+#modal.point .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point h1 {
+    color: white;
+    margin-top: 32px;
+}

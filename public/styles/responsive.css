@@ -1,0 +1,57 @@
+@media (max-width: 900px) { /*ajuste da tela, qndo diminuida a pagina*/ 
+    
+    #page-home {
+        background-position-x: 70vw; /*nao encavalar a imagem qndo a pagina diminui*/
+    }
+
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+
+        left: 50%;
+        transform: translate(-50%); /*ajuste ao meio*/
+    }
+
+    #page-home main {
+        align-items: center;
+    }
+
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results .cards img {
+        height: 250px;
+    }
+
+    #page-create-point .field-group {
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field {
+        margin-left: 0;
+    }
+
+}
+
+
+
+
+@media (min-width: 1700px) {  /*qndo a largura chegar a 1700px pra cima serão implementadas as regras a seguir*/
+   
+    #page-home {
+        background-position-x: 40vw; 
+    }
+}
+
+@media (max-height: 760px) { /*qndo a altura maxima passar de 760px, serão implementadas as proximas regras*/
+
+    #page-home {
+        background-position-y: 200px; /*fica fixa a imagem*/
+    }
+}
